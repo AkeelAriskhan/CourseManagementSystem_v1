@@ -29,12 +29,15 @@ namespace CourseManagementSystem_v1
              var  course=courses.Find(x => x.courseId == courseId);
                course.title = title;
             course.Duration = Duration; 
-            course.Price = Price;   
+            course.Price = Price;
+            Console.WriteLine("Course Added Updated");
         }
         public void DeleteCourse(string courseId) 
         {
             var course = courses.Find(x => x.courseId == courseId);
             courses.Remove(course);
+            Console.WriteLine("Course Deleted");
+
         }
     }
 }

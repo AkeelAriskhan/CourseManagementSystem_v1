@@ -25,6 +25,7 @@ namespace CourseManagementSystem_v1
                 Console.WriteLine("3. Update a Course");
                 Console.WriteLine("4. Delete a Course");
                 Console.WriteLine("5. Exit");
+                Console.Write("Choose an option:");
                 int num=Convert.ToInt32(Console.ReadLine());
 
                 switch (num) {
@@ -37,7 +38,7 @@ namespace CourseManagementSystem_v1
                         var title = Console.ReadLine();
                         Console.Write(" Enter a Duration:");
                         var Duration = Console.ReadLine();
-                        Console.WriteLine("Enter a course price : ");
+                        Console.Write("Enter a course price : ");
                          var Price=decimal.Parse(Console.ReadLine());
                         coursemanage.CreateCourse(courseId, title, Duration, Price);
                         break;
@@ -55,7 +56,7 @@ namespace CourseManagementSystem_v1
                         var title1 = Console.ReadLine();
                         Console.Write(" Enter a Duration:");
                         var Duration1 = Console.ReadLine();
-                        Console.WriteLine("Enter a course price : ");
+                        Console.Write("Enter a course price : ");
                         var Price1 = decimal.Parse(Console.ReadLine());
                         coursemanage.UpdateCourse(courseId1, title1, Duration1, Price1);
                         break;
