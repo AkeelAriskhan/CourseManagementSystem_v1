@@ -39,5 +39,25 @@ namespace CourseManagementSystem_v1
             Console.WriteLine("Course Deleted");
 
         }
+        public decimal ValidateCoursePrice()
+        {
+            decimal price = 0;
+            while (true)
+            {
+                Console.Write("enter a course price");
+                 decimal proprice =decimal.Parse(Console.ReadLine());
+                if (proprice > 0)
+                {
+                    price = proprice;
+                    break;
+                }else
+                {
+                    Console.WriteLine("price must be positive number");
+                }
+               
+
+            }
+            return price;
+        }
     }
 }
