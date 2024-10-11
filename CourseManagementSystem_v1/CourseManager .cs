@@ -44,7 +44,7 @@ namespace CourseManagementSystem_v1
             decimal price = 0;
             while (true)
             {
-                Console.Write("enter a course price");
+                Console.Write("enter a course price :");
                  decimal proprice =decimal.Parse(Console.ReadLine());
                 if (proprice > 0)
                 {
