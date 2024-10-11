@@ -1,0 +1,38 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace CourseManagementSystem_v1
+{
+    internal class CourseManager
+    {
+
+          List<Course> courses=new List<Course>();
+        public void CreateCourse(string courseId, string title, string Duration, decimal Price)
+        {
+            var newcourse =new Course(courseId, title, Duration, Price);
+            courses.Add(newcourse);
+            Console.WriteLine("Course Added sucseefully");
+        }
+        public void  ReadCourses()
+        {
+            Console.WriteLine("courses list");
+            foreach (var item in courses) 
+            {
+             Console.WriteLine(item);
+            }
+        }
+        public void UpdateCourse(string courseId, string title, string Duration, decimal Price)
+        {
+             var  course=courses.Find(x => x.courseId == courseId);
+            course(courseId, title, Duration, Price);
+        }
+        public void DeleteCourse(string courseId) 
+        {
+            var course = courses.Find(x => x.courseId == courseId);
+            courses.Remove(course);
+        }
+    }
+}
