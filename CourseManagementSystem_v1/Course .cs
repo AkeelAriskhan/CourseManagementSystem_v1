@@ -10,9 +10,9 @@ namespace CourseManagementSystem_v1
     {
 
           public string courseId {  get; set; }
-           private string title { get; set; }
-           private string Duration { get; set; }
-            private decimal Price { get; set; }
+           public string title { get; set; }
+           public string Duration { get; set; }
+            public decimal Price { get; set; }
 
         public Course(string courseId, string title, string Duration, decimal Price)
         {

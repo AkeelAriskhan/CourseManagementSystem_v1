@@ -27,7 +27,9 @@ namespace CourseManagementSystem_v1
         public void UpdateCourse(string courseId, string title, string Duration, decimal Price)
         {
              var  course=courses.Find(x => x.courseId == courseId);
-            course(courseId, title, Duration, Price);
+               course.title = title;
+            course.Duration = Duration; 
+            course.Price = Price;   
         }
         public void DeleteCourse(string courseId) 
         {
