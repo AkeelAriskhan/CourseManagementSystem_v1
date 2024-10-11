@@ -19,5 +19,9 @@ namespace CourseManagementSystem_v1
             Schedule = schedule;
             ClassroomCapacity = classroomCapacity;
         }
+        public override string DisplayCourseInfo()
+        {
+            return base.DisplayCourseInfo()+$"Schedule {Schedule}  ClassroomCapacity{ClassroomCapacity}";
+        }
     }
 }

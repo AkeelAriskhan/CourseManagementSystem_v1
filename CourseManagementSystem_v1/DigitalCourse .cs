@@ -17,5 +17,10 @@ namespace CourseManagementSystem_v1
             CourseLink = courseLink;
             FileSize = fileSize;
         }
+
+        public override string DisplayCourseInfo()
+        {
+            return base.DisplayCourseInfo()+$"CourseLink: {CourseLink} FileSize {FileSize} ";
+        }
     }
 }
